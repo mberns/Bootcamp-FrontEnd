@@ -1,6 +1,9 @@
 const playGround = () => {
-    const randomNumber = getRandomNumber (100);
-  
+
+  function getRandomNumber (maxNum) {
+    return (Math.ceil(Math.random()*maxNum));
+  }
+
   function isEven (number) {
     if (number % 2 === 0) {
       console.log("Es par");
@@ -11,7 +14,7 @@ const playGround = () => {
     }
   }
   
-  
+  const randomNumber = getRandomNumber (100);
   //console.log(randomNumber);
   isEven (randomNumber);
   const correctAnswer = isEven (randomNumber);
@@ -27,10 +30,6 @@ const playGround = () => {
     alert("Respuesta incorrecta");
     return false;
   }
-  }
-  
-  function getRandomNumber (maxNum) {
-    return (Math.ceil(Math.random()*maxNum));
   }
   
   
@@ -49,8 +48,9 @@ const playGround = () => {
   }
   
   
-  const myButton = document.querySelector("buttton")
+  const myButton = document.querySelector("button")
   myButton.addEventListener("click",function(){
     startGame()
   })
-  
+  //para editar codigo online
+  //https://codepen.io/pen/?editors=1111
